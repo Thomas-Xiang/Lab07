@@ -5,8 +5,14 @@ import sys
 def mapper():
     for line in sys.stdin:
         data = line.strip().split(",")
-        timestamp, city, item, cost = data
-        print(city + "," + cost)
+        try:
+            timestamp, city, item, cost = data
+            print(city + "," + cost)
+        except:
+            pass
+
+
+
 
 if __name__ == "__main__":
     # what function should run when python mapper.py is called?
